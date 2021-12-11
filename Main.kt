@@ -1,10 +1,8 @@
-package search
-
 import kotlin.system.exitProcess
 import java.io.File
 
 class SearchEngine(args: Array<String>) {
-    private val listOfPeople = File(args[1]).readLines().toMutableList() // All Data
+    private val listOfPeople = File(*).readLines().toMutableList() // All Data  // * - Put Your Absolute Path to Txt File Here (For IntelliJ IDEA put args "--data text.txt" - args[1])
     private var index = mutableMapOf<String, MutableList<Int>>() // Inverted Index
 
     fun start() {
